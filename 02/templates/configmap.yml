@@ -3,6 +3,7 @@ kind: ConfigMap
 metadata:
   name: game-demo
   labels:
+    helm.sh/hook: pre-install
 {{- include "deploy.labels" . | nindent 4 }}
 data:
   player_initial_lives: "3"
