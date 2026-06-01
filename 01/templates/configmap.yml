@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: {{ .Values.deploy_name | default "deploy01    " | trim  }}
 data:
-  sample: {{ .Values.value1 | indent 8 }}
+  sample: {{ .Values.value1 | nindent 8 }}
 
