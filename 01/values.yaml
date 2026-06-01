@@ -4,3 +4,7 @@ labels:
   tier: frontend
   app: guestbook
 
+value1: |
+  OK
+  NOTOK
+
