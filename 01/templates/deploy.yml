@@ -20,7 +20,7 @@ spec:
       containers:
       - name: nginx
         image: nginx:{{ .Values.nginx_version }}
-        env:
+        environment:
           - name: sample
             value: {{ .Values.sample_env }}
 
