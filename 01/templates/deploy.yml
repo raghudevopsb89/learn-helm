@@ -14,7 +14,7 @@ spec:
   template:
     metadata:
       labels:
-        {{- toYaml .Values.labels | nindent 8 }}
+        {{- toYaml .Values.labels | indent 8 }}
     spec:
       containers:
       - name: nginx
