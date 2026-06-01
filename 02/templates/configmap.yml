@@ -3,8 +3,7 @@ kind: ConfigMap
 metadata:
   name: game-demo
   labels:
-    app: guestbook
-    tier: frontend
+{{- include "deploy.labels" . | nindent 4 }}
 data:
   player_initial_lives: "3"
   score: "5000"
