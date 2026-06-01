@@ -1,8 +1,3 @@
-{{ define "deploy.labels" }}
-  tier: frontend
-  app: guestbook
-{{ end }}
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
