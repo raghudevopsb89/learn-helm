@@ -1,4 +1,3 @@
-{{- define "deploy.labels" -}}
-  tier: frontend
+{{- define "deploy.labels" }}tier: frontend
   app: nginx
 {{- end }}
