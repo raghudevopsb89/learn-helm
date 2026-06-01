@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.deploy_name | default deploy01  }}
+  name: {{ .Values.deploy_name | default "deploy01"  }}
   labels:
     app: guestbook
     tier: frontend
