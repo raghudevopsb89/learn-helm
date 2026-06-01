@@ -1,2 +1,6 @@
 replicas: 3
 nginx_version: 1.26
+labels:
+  tier: frontend
+  app: guestbook
+

@@ -14,8 +14,7 @@ spec:
   template:
     metadata:
       labels:
-        tier: frontend
-        app: guestbook
+        {{- toYaml .Values.labels | nindent 8 }}
     spec:
       containers:
       - name: nginx
