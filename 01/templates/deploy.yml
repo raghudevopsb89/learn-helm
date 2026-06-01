@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.deploy_name | default "deploy01" }}
+  name: {{ .Values.deploy_name | default deploy01  }}
   labels:
     app: guestbook
     tier: frontend
@@ -20,4 +20,7 @@ spec:
       containers:
       - name: nginx
         image: nginx:{{ .Values.nginx_version }}
+        env:
+          - name: sample
+            value: {{ .Values.sample_env }}
 
