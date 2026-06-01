@@ -22,5 +22,5 @@ spec:
         image: nginx:{{ .Values.nginx_version }}
         env:
           - name: sample
-            value: {{ .Values.sample_env }}
+            value: {{ .Values.sample_env | quote }}
 
