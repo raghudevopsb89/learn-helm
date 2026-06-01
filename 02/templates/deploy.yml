@@ -1,0 +1,26 @@
+{{- define "deploy.labels" -}}
+  tier: frontend
+  app: guestbook
+{{- end }}
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy01
+  labels:
+{{- include "deploy.labels" . | nindent 4 }}
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+{{- include "deploy.labels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+{{- include "deploy.labels" . | nindent 8 }}
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.25
+

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: game-demo
+  labels:
+    app: guestbook
+    tier: frontend
+data:
+  player_initial_lives: "3"
+  score: "5000"
+  name: "John"
