@@ -1,4 +1,4 @@
 {{ define "deploy.labels" }}
   tier: frontend
-  app: guestbook
+  app: nginx
 {{ end }}
